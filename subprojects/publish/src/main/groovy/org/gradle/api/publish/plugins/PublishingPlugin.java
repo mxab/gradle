@@ -56,6 +56,7 @@ public class PublishingPlugin implements Plugin<Project> {
         PublicationContainer publications = instantiator.newInstance(DefaultPublicationContainer.class, instantiator);
         project.getExtensions().create(PublishingExtension.NAME, DefaultPublishingExtension.class, repositories, publications);
 
+
         Task publishLifecycleTask = project.getTasks().create(PUBLISH_LIFECYCLE_TASK_NAME);
         publishLifecycleTask.setDescription("Publishes all publications produced by this project.");
         publishLifecycleTask.setGroup(PUBLISH_TASK_GROUP);
@@ -66,5 +67,7 @@ public class PublishingPlugin implements Plugin<Project> {
                 project.getExtensions().getByType(DefaultPublishingExtension.class);
             }
         });
+
+
     }
 }

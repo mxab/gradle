@@ -6,6 +6,9 @@ dependencies {
     compile project(':messaging')
     compile project(':wrapper')
     compile project(':baseServices')
+    compile project(':publish')
+    compile project(':maven')
+    compile project(':ivy')
     publishCompile libraries.slf4j_api
 
     testFixturesCompile project(':baseServicesGroovy')
